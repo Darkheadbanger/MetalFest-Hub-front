@@ -1,12 +1,11 @@
 import Connexion from "../pages/Connexion.page";
 
-export default function Authentification() {
+function Authentification() {
   return (
-    <header>
-        <div className="festival-connexion">
-            
-        </div>
-    </header>
-  )
+    <div className="festival-connexion">
+      <Connexion />
+    </div>
+  );
 }
 
+export default Authentification;

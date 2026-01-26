@@ -4,14 +4,14 @@
 
 import "./styles/Global.css"
 import './App.css'
-import { Routes } from 'react-router-dom'
-
+import HomePage from "./layouts/HomePage.layout"
+import Routers from "./Routers"
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Routes></Routes>
+      <Routers></Routers>
     </>
   )
 }

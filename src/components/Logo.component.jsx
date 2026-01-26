@@ -1,5 +1,5 @@
 import logoImage from "../assets/images/meta-festival-hub-logo.png";
-
+import "../styles/logo.css"
 export default function Logo() {
   return (
     <>

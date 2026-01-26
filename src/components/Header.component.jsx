@@ -1,7 +1,8 @@
 import Logo from "./Logo.component";
 import Authentification from "./Authentification.components";
+import "../styles/header.css"
 
-export default function Header() {
+ function Header() {
   return (
     <header>
       <div className="header-container">
@@ -10,10 +11,11 @@ export default function Header() {
           <div className="info-festival">Metal Festival Hub</div>
         </div>
         <div className="festival-connexion">
-          <Authentification />
+          <Authentification/>
         </div>
       </div>
     </header>
   );
 }
 
+export default Header;
