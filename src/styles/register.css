@@ -59,7 +59,82 @@ button[type="submit"]:hover {
   font-weight: 600;
   background: none;
   border: none;
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
+  cursor: pointer;
+  color: #afcb89;
+  text-decoration: none;
+}
+
+.register-links a:hover {
+  color: #ffd48a;
+  transform: translateY(-2px);
+}
+/* Styles for CreateAccount (register) */
+.register-container {
+  border: 2px white solid;
+  width: 198px;
+  height: auto;
+  padding: 5px 15px 34px 13px;
+  background-color: #931300;
+  margin-bottom: 20px;
+}
+
+.register-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-info input {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 2px solid #afcb89;
+  color: #ffffff;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.register-info input:focus {
+  outline: none;
+  border-color: #afcb89;
+  background-color: rgba(40, 40, 40, 0.9);
+}
+
+button[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  color: #afcb89;
+  align-self: flex-end;
+}
+
+button[type="submit"]:hover {
+  color: #ffd48a;
+  transform: translateY(-1px);
+}
+
+.register-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: space-around;
+}
+
+.register-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
   cursor: pointer;
   color: #afcb89;
   text-decoration: none;
@@ -80,7 +155,6 @@ button[type="submit"]:hover {
 
 .connexion-info {
   display: flex;
-  .register-container {
 }
 
 .connexion-info input {
@@ -114,7 +188,7 @@ button[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
-  .register-info {
+.register-info {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -127,7 +201,9 @@ button[type="submit"]:hover {
   font-weight: 600;
   background: none;
   border: none;
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
   cursor: pointer;
   color: #afcb89;
   text-decoration: none;
@@ -139,7 +215,9 @@ button[type="submit"]:hover {
     font-weight: 600;
     background: none;
     border: none;
-    transition: color 0.18s ease, transform 0.18s ease;
+    transition:
+      color 0.18s ease,
+      transform 0.18s ease;
     cursor: pointer;
     color: #afcb89;
     text-decoration: none;
@@ -149,6 +227,4 @@ button[type="submit"]:hover {
     color: #ffd48a;
     transform: translateY(-2px);
   }
-  color: #ffd48a;
-  transform: translateY(-2px);
 }
