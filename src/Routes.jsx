@@ -7,15 +7,15 @@ import AddFestival from "./layouts/AddFestival.layout.jsx"
 import UpdateFestival from "./layouts/UpdateFestival.layout.jsx";
 
 // function Routers({festival, setFestival}: {festival: any, setFestival: any}) {
-function Routers({festival, setFestival}: {festival: any, setFestival: any}) {
+function Routers({festival, setFestival}) {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage bands={festival}/> }/>
-        <Route path="/festival" element={<BandsPage bands={festival} setBands={setFestival}/>} />
-        <Route path="/festival/:festivalId" element={<BandsIdPage bands={festival} setBands={setFestival}/>} />
-        <Route path="/addFestival" element={<AddBand bands={festival} setBands={setFestival}/>} />
-        <Route path="/updateFestival/:festivalId" element={<UpdateBand bands={bands} setBands={setFestival}/>} />
+        <Route path="/" element={<HomePage festival={festival}/> }/>
+        <Route path="/festival" element={<festivalPage festival={festival} setfestival={setFestival}/>} />
+        <Route path="/festival/:festivalId" element={<festivalIdPage festival={festival} setfestival={setFestival}/>} />
+        <Route path="/addFestival" element={<AddBand festival={festival} setfestival={setFestival}/>} />
+        <Route path="/updateFestival/:festivalId" element={<UpdateBand festival={festival} setfestival={setFestival}/>} />
         <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </>
