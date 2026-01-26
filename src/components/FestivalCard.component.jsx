@@ -1,8 +1,8 @@
 import React from 'react';
-import FestivalImage from './FestivalImage.jsx';
-import FestivalInfo from './FestivalInfo.jsx';
-import FestivalDetails from './FestivalDetails.jsx';
-import FeaturedBands from './FeaturedBands.jsx';
+import FestivalImage from './FestivalImage.component.jsx';
+import FestivalInfo from './FestivalInfo.component.jsx';
+import FestivalDetails from './FestivalDetails.component.jsx';
+import FeaturedBands from './FeaturedBands.component.jsx';
 
 export default function FestivalCard({ festival = {} }) {
   const { image, title, url, date, place, bands } = festival;

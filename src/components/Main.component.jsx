@@ -1,5 +1,5 @@
 import "../styles/main.css";
-import FestivalCard from "./FestivalCard";
+import FestivalCard from "./FestivalCard.component";
 
 const SAMPLE_FESTIVAL = {
   id: 1,
