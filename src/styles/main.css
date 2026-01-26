@@ -1,0 +1,20 @@
+.festival-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.festival-information-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.festival-information {
+  display: flex;
+  flex-direction: row;
+}
+.festival-details {
+  display: flex;
+  flex-direction: row;
+}

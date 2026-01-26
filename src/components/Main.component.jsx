@@ -1,9 +1,7 @@
-// import Connexion from "../pages/Connexion.page";
-
+import "../styles/main.css"
 function Main() {
   return (
-    <div className="festival-connexion">
-      <div className="festival-container">
+    <div className="festival-container">
         <div className="festival-image">
             <img src="" alt="Festival images" />
         </div>
@@ -22,7 +20,6 @@ function Main() {
         </div>
         <div>
 
-        </div>
       </div>
     </div>
   );
