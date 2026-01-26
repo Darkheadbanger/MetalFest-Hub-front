@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family:
+    "New Rocker", cursive, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header-connexion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin: 2rem 280px 0 0;
+}
+
+.main-section-container {
+  text-align: center;
+  max-width: 800px;
+}
+
+@media (max-width: 480px) {
+}
+
+.main-choice {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.bands {
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page {
+  position: absolute;
+  left: 900px;
+  transform: translateX(-50%);
+  top: 200px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .main-page {
+    left: 550px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 665px) {
+  .main-page {
+    left: 560px;
+  }
+}
+
+@media (min-width: 666px) and (max-width: 768px) {
+  .main-page {
+    left: 600px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+  .main-page {
+    left: 664px;
+  }
+}
