@@ -1,27 +1,24 @@
-import "../styles/main.css"
+import "../styles/main.css";
+import FestivalCard from "./FestivalCard";
+
+const SAMPLE_FESTIVAL = {
+  id: 1,
+  image: "",
+  title: "Hellfest",
+  url: "https://www.hellfest.fr",
+  date: "21-23 Juin",
+  place: "Clisson, France",
+  bands: [
+    { id: 1, name: "Band A" },
+    { id: 2, name: "Band B" },
+  ],
+};
+
 function Main() {
   return (
-    <div className="festival-container">
-        <div className="festival-image">
-            <img src="" alt="Festival images" />
-        </div>
-        <div className="festival-information-container">
-            <div className="festival-information">
-                <div className="festival-title">Hellfest</div>
-                <div className="festival-visit">url festivavl</div>
-            </div>
-            <div className="festival-details">
-                <p className="date"></p>
-                <p className="place"></p>
-            </div>
-            <div className="features-bands">
-                <div>Band1</div>
-            </div>
-        </div>
-        <div>
-
-      </div>
-    </div>
+    <main className="main-festival">
+      <FestivalCard festival={SAMPLE_FESTIVAL} />
+    </main>
   );
 }
 
