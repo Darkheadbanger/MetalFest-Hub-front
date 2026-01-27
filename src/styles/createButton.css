@@ -28,8 +28,3 @@
   transform: translateY(0);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.create-button:focus {
-  outline: 3px solid rgba(255, 212, 138, 0.6);
-  outline-offset: 3px;
-}
