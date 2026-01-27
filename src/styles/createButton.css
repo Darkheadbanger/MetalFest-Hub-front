@@ -1,0 +1,35 @@
+/* Simple create button styles */
+.create-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #ff6b6b 0%, #ff9f43 100%);
+  color: #111;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+.create-button p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.create-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.create-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.create-button:focus {
+  outline: 3px solid rgba(255, 212, 138, 0.6);
+  outline-offset: 3px;
+}

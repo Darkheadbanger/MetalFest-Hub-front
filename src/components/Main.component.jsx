@@ -1,5 +1,6 @@
 import "../styles/main.css";
 import FestivalCard from "./FestivalCard.component";
+import CreateFestivalButton from "./CreateFestivalButton.component"
 
 const SAMPLE_FESTIVAL = {
   id: 1,
@@ -17,6 +18,7 @@ const SAMPLE_FESTIVAL = {
 function Main() {
   return (
     <main className="main-festival">
+        <CreateFestivalButton/>
       <FestivalCard festival={SAMPLE_FESTIVAL} />
     </main>
   );

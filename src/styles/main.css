@@ -69,6 +69,13 @@
   color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
+.main-festival{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 @media (max-width: 720px) {
   .festival-container {
