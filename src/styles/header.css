@@ -9,3 +9,54 @@
   display: flex;
   flex-direction: column;
 }
+
+/* Auth switch in header */
+.auth-switch {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.auth-switch button {
+  background: #fff;
+  color: #111;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.auth-switch button.active {
+  background: linear-gradient(90deg,#ffd48a,#ffb86b);
+}
+
+/* support .auth-option (div) in addition to buttons */
+.auth-switch .auth-option {
+  background: #fff;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+}
+
+.auth-switch .auth-option.active {
+  background: linear-gradient(90deg,#ffd48a,#ffb86b);
+}
+
+.link-like {
+  background: none;
+  border: none;
+  color: #ffd48a;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.festival-connexion { display: flex; align-items: center; }

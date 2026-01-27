@@ -1,0 +1,18 @@
+.deconnexion-container {
+  display: flex;
+  align-items: center;
+}
+
+.deconnexion-btn {
+  padding: 8px 12px;
+  background: linear-gradient(90deg,#ff4d4f,#c70039);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.deconnexion-btn:hover {
+  transform: translateY(-2px);
+}
