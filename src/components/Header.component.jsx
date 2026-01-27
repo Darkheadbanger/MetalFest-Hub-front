@@ -16,7 +16,14 @@ import { AuthContext } from "../context/auth.context";
          <Link to="/"> <div className="info-festival">Metal Festival Hub</div></Link>
         </div>
         <div className="festival-connexion">
-            <Authentification/>
+          {isLoggedIn ? (
+            <div className="header-logged">
+              <Deconnexion />
+              {user && <span className="header-user">{user.name}</span>}
+            </div>
+          ) : (
+            <Authentification />
+          )}
         </div>
       </div>
     </header>

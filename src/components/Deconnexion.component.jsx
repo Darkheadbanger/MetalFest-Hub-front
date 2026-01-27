@@ -9,10 +9,16 @@ function Deconnexion() {
 
   const handleLogout = () => {
     if (typeof logout === "function") {
-      logout();
+      try {
+        logout();
+      } catch (e) {
+        console.error(e);
+      }
+      navigate("/");
+      window.location.reload();
     } else {
       // fallback: clear token and redirect
-      try { localStorage.removeItem("authToken"); } catch (e) {}
+      try { localStorage.removeItem("authToken"); } catch (error) {console.error(error)}
       navigate("/");
       // small reload to ensure state cleared
       window.location.reload();
