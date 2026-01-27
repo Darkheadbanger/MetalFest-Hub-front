@@ -1,6 +1,6 @@
-.input-festival button[type="click"] {
+.delete-festival button[type="click"] {
   padding: 10px 14px;
-  background: linear-gradient(90deg,#ff6b6b,#ff9f43);
+  background: linear-gradient(90deg,#ff4d4f,#c70039);
   border: none;
   color: #111;
   font-weight: 700;
@@ -8,10 +8,10 @@
   cursor: pointer;
 }
 
-.input-festival button[type="click"]:hover { transform: translateY(-2px); }
+.delete-festival button[type="click"]:hover { transform: translateY(-2px); }
 
 /* helper: span this input container across both grid columns and pin it to the right */
-.input-festival--full {
+.delete-festival--full {
   grid-column: 1 / -1;
   justify-self: end;
 }

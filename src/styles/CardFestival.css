@@ -1,0 +1,13 @@
+.festival-connexion{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* buttons container in festival card */
+.festival-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}

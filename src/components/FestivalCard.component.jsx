@@ -1,9 +1,11 @@
-import React from 'react';
-import FestivalImage from './FestivalImage.component.jsx';
-import FestivalInfo from './FestivalInfo.component.jsx';
-import FestivalDetails from './FestivalDetails.component.jsx';
-import FeaturedBands from './FeaturedBands.component.jsx';
-
+import React from "react";
+import FestivalImage from "./FestivalImage.component.jsx";
+import FestivalInfo from "./FestivalInfo.component.jsx";
+import FestivalDetails from "./FestivalDetails.component.jsx";
+import FeaturedBands from "./FeaturedBands.component.jsx";
+import ModifyButton from "./ModifyButton.component.jsx";
+import DeleteButton from "./DeleteButton.component.jsx"
+import "../styles/CardFestival.css"
 export default function FestivalCard({ festival = {} }) {
   const { image, title, url, date, place, bands } = festival;
 
@@ -14,6 +16,10 @@ export default function FestivalCard({ festival = {} }) {
         <FestivalInfo title={title} url={url} />
         <FestivalDetails date={date} place={place} />
         <FeaturedBands bands={bands} />
+        <div className="festival-buttons">
+          <ModifyButton />
+          <DeleteButton />
+        </div>
       </div>
     </div>
   );

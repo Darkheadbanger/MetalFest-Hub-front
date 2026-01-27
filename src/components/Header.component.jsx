@@ -1,14 +1,15 @@
 import Logo from "./Logo.component";
 import Authentification from "./Authentification.components";
 import "../styles/header.css"
+import { Link } from "react-router-dom";
 
  function Header() {
   return (
     <header>
       <div className="header-container">
         <div className="festival-information">
-          <Logo />
-          <div className="info-festival">Metal Festival Hub</div>
+          <Link to="/"> <Logo /></Link>
+         <Link to="/"> <div className="info-festival">Metal Festival Hub</div></Link>
         </div>
         <div className="festival-connexion">
           <Authentification/>
