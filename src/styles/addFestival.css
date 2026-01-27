@@ -1,0 +1,77 @@
+.festival-connexion {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.addfestival-container {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg,#3a0d0a 0%, #52120f 100%);
+  padding: 20px;
+  border-radius: 10px;
+  color: #efe6dd;
+}
+
+.addfestival-container h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #ffd48a;
+}
+
+.addfestival-forms {
+  display: block;
+}
+
+.festival-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+
+.input-festival {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-festival label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #f0e7dd;
+}
+
+.input-festival input[type="text"],
+.input-festival input[type="url"],
+.input-festival input[type="number"],
+.input-festival input[type="date"],
+.input-festival textarea {
+  background-color: #201412;
+  border: 1px solid rgba(175,203,137,0.12);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.input-festival textarea { min-height: 84px; resize: vertical; }
+
+.input-festival input[type="file"] { color: #fff; }
+
+.input-festival button[type="submit"] {
+  padding: 10px 14px;
+  background: linear-gradient(90deg,#ff6b6b,#ff9f43);
+  border: none;
+  color: #111;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-festival button[type="submit"]:hover { transform: translateY(-2px); }
+
+/* helper: span this input container across both grid columns and pin it to the right */
+.input-festival--full {
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+
+

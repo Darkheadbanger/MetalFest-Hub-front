@@ -1,6 +1,7 @@
 import "../styles/main.css";
 import FestivalCard from "./FestivalCard.component";
 import CreateFestivalButton from "./CreateFestivalButton.component"
+import { Link } from "react-router-dom";
 
 const SAMPLE_FESTIVAL = {
   id: 1,
@@ -18,7 +19,7 @@ const SAMPLE_FESTIVAL = {
 function Main() {
   return (
     <main className="main-festival">
-        <CreateFestivalButton/>
+      <Link to="/AddFestival"> <CreateFestivalButton/></Link>
       <FestivalCard festival={SAMPLE_FESTIVAL} />
     </main>
   );

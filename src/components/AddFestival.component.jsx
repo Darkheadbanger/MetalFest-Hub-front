@@ -1,3 +1,5 @@
+import "../styles/addFestival.css"
+
 function AddFestival() {
   const submitFestival = (e) => {
     e.preventDefault();
@@ -24,7 +26,7 @@ function AddFestival() {
 
             <div className="input-festival">
               <label htmlFor="festivalDate">Date *</label>
-              <input id="festivalDate" name="festivalDate" type="datetime-local" required />
+              <input id="festivalDate" name="festivalDate" type="date" required />
             </div>
 
             <div className="input-festival">
@@ -37,8 +39,6 @@ function AddFestival() {
               <input name="lineup[]" type="text" placeholder="Act 1" />
               <input name="lineup[]" type="text" placeholder="Act 2" />
               <input name="lineup[]" type="text" placeholder="Act 3" />
-              <label htmlFor="lineupText">Other acts (comma separated)</label>
-              <textarea id="lineupText" name="lineupText" rows="2" placeholder="Act A, Act B"></textarea>
             </div>
 
             <div className="input-festival">
@@ -55,19 +55,9 @@ function AddFestival() {
               <textarea id="description" name="description" rows="5" placeholder="festival of the death metal"></textarea>
             </div>
 
-            <div className="input-festival">
-              <label htmlFor="createdAt">Created At</label>
-              <input id="createdAt" name="createdAt" type="datetime-local" />
-            </div>
-
-            <div className="input-festival">
-              <label htmlFor="updatedAt">Updated At</label>
-              <input id="updatedAt" name="updatedAt" type="datetime-local" />
-            </div>
-
             <input type="hidden" name="__v" value="0" />
 
-            <div className="input-festival">
+            <div className="input-festival input-festival--full">
               <button type="submit">Create Festival</button>
             </div>
           </section>
