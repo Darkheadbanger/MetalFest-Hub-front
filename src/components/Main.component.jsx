@@ -18,7 +18,7 @@ const SAMPLE_FESTIVAL = {
 };
 
 function Main() {
-  const  { isLoggedIn, user } = useContext(AuthContext)
+  const  { isLoggedIn } = useContext(AuthContext)
   return (
     <main className="main-festival">
       {isLoggedIn ? (

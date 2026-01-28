@@ -12,6 +12,7 @@ import "../styles/CardFestival.css"
 export default function FestivalCard({ festival = {} }) {
   const { image, title, url, date, place, bands } = festival;
   const { isLoggedIn } = useContext(AuthContext);
+  const id = festival._id || festival.id || '';
 
   return (
     <div className="festival-container">
@@ -21,12 +22,9 @@ export default function FestivalCard({ festival = {} }) {
         <FestivalDetails date={date} place={place} />
         <FeaturedBands bands={bands} />
         <div className="festival-buttons">
-         {(() => {
-           const id = festival._id || festival.id || '';
-           return (
-             <Link to={`/updateFestival/${id}`}>  <ModifyButton /> </Link>
-           )
-         })()}
+        {isLoggedIn ? (
+          <Link to={`/updateFestival/${id}`}> <ModifyButton /> </Link>
+        ): null}   
         {isLoggedIn ? (
           <DeleteButton />
           ) : null
