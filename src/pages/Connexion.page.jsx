@@ -34,7 +34,6 @@ function Connexion({ onSwitch }) {
     }catch(error){
       const errorMessage = error?.response?.data?.message || error.message || "Signup failed";
       setErrorMessage(errorMessage);
-
     }
 
   };

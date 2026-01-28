@@ -2,7 +2,8 @@ import "../styles/main.css";
 import FestivalCard from "./FestivalCard.component";
 import CreateFestivalButton from "./CreateFestivalButton.component"
 import { Link } from "react-router-dom";
-
+import { useContext } from "react";
+import { AuthContext } from "../context/auth.context";
 const SAMPLE_FESTIVAL = {
   id: 1,
   image: "",
@@ -17,9 +18,14 @@ const SAMPLE_FESTIVAL = {
 };
 
 function Main() {
+  const  { isLoggedIn, user } = useContext(AuthContext)
   return (
     <main className="main-festival">
-      <Link to="/AddFestival"> <CreateFestivalButton/></Link>
+      {isLoggedIn ? (
+        <Link to="/AddFestival"> <CreateFestivalButton/></Link>
+      ) : <h1>Welcome and see all the metal festival in the world</h1>}
+
+      
       <FestivalCard festival={SAMPLE_FESTIVAL} />
     </main>
   );
