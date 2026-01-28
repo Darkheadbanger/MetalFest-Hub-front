@@ -10,20 +10,18 @@ import { useContext } from "react";
 
 import "../styles/CardFestival.css"
 export default function FestivalCard({ festival }) {
-  const { image, title, url, date, place, bands } = festival;
   const { isLoggedIn } = useContext(AuthContext);
-  const id = festival._id || festival.id || '';
-
+  console.log("iccci", festival.FestivalImage)
   return (
     <div className="festival-container">
-      <FestivalImage src={image} alt={title} />
+      <FestivalImage festival={festival} />
       <div className="festival-information-container">
-        <FestivalInfo title={title} url={url} />
-        <FestivalDetails date={date} place={place} />
-        <FeaturedBands bands={bands} />
+        <FestivalInfo title={festival.festivalName}/>
+        <FestivalDetails date={festival.festivalDate} place={festival.festivalLocation} />
+        <FeaturedBands bands={festival.featureBands} />
         <div className="festival-buttons">
         {isLoggedIn ? (
-          <Link to={`/updateFestival/${id}`}> <ModifyButton /> </Link>
+          <Link to={`/updateFestival/${festival._id}`}> <ModifyButton /> </Link>
         ): null}   
         {isLoggedIn ? (
           <DeleteButton />

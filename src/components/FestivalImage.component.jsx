@@ -1,11 +1,13 @@
-import React from 'react';
-import festivalImage from '../assets/images/hellfest.jpg';
+export default function FestivalImage({ festival }) {
+  console.log("festival:", festival);
+  const imageRaw = festival?.image || festival?.FestivalImage || "";
+  const imageWithSpace = imageRaw ? String(imageRaw).split(" ")[0] : "";
+  const image = imageWithSpace ? encodeURI(imageWithSpace) : "";
 
-// export default function FestivalImage({ src = festivalImage, alt = 'Festival image', className = 'festival-image' }) {
-export default function FestivalImage() {
   return (
     <div className="festival-image">
-      <img src={festivalImage} alt="jj" />
+      {image ? <img src={image} alt={festival?.festivalName || "festival image"} /> :
+             <div className="no-image">No image available</div>}
     </div>
   );
 }
