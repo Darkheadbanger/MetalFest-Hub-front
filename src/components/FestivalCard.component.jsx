@@ -9,7 +9,7 @@ import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
 
 import "../styles/CardFestival.css"
-export default function FestivalCard({ festival = {} }) {
+export default function FestivalCard({ festival }) {
   const { image, title, url, date, place, bands } = festival;
   const { isLoggedIn } = useContext(AuthContext);
   const id = festival._id || festival.id || '';
