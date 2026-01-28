@@ -19,8 +19,8 @@ function Main() {
       .then((res) => {
         if (!mounted) return;
         let data = res.data;
-        const normalizFestArray = Array.isArray(data) ? data : data.festivals || data.data || [].
-        setFestivals(normalizFestArray)
+        const normalizeFestArray = Array.isArray(data) ? data : data.festivals || data.data || [];
+        setFestivals(normalizeFestArray);
       })
       .catch((err) => {
         if (!mounted) return;
