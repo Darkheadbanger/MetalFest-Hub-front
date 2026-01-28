@@ -25,7 +25,7 @@ function CreateAccount({ onSwitch }) {
     setErrorMessage(undefined);
     try {
       await axios.post(`${API_URL}/auth/signup`, requestBody );
-      navigate("/connexion");
+      navigate("/");
     } catch (err) {
       const errorMessage = err?.response?.data?.message || err.message || "Signup failed";
       setErrorMessage(errorMessage);
