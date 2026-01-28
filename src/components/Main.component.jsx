@@ -23,9 +23,8 @@ function Main() {
     <main className="main-festival">
       {isLoggedIn ? (
         <Link to="/AddFestival"> <CreateFestivalButton/></Link>
-      ) : <h1>Welcome and see all the metal festival in the world</h1>}
-
-      
+        ) : <h1>Welcome and see all the metal festival in the world</h1>
+      }
       <FestivalCard festival={SAMPLE_FESTIVAL} />
     </main>
   );
