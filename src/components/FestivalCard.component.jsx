@@ -11,10 +11,9 @@ import { useContext } from "react";
 import "../styles/CardFestival.css"
 export default function FestivalCard({ festival }) {
   const { isLoggedIn } = useContext(AuthContext);
-  console.log("iccci", festival.FestivalImage)
   return (
     <>
-    <Link to="/festival/:festivalId">
+    <Link to={`/festival/${festival._id}`} onClick={() => console.log("ici", festival._id)}>
       <div className="festival-container">
         <FestivalImage festival={festival} />
         <div className="festival-information-container">

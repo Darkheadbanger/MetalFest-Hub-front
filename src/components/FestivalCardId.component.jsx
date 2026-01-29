@@ -5,30 +5,36 @@ import FestivalDetails from "./FestivalDetails.component.jsx";
 import FeaturedBands from "./FeaturedBands.component.jsx";
 import ModifyButton from "./ModifyButton.component.jsx";
 import DeleteButton from "./DeleteButton.component.jsx"
+import DescriptionFestival from "./descriptionFestival.component.jsx"
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
+import { useContext } from "react";
 
 import "../styles/CardFestival.css"
- function FestivalCardId({ festival = {} }) {
-  const { image, title, url, date, place, bands } = festival;
-
+ function FestivalCardId({ festival }) {
+  const { isLoggedIn } = useContext(AuthContext);
+  console.log()
   return (
-    <div className="festival-container">
-      <FestivalImage src={image} alt={title} />
-      <div className="festival-information-container">
-        <FestivalInfo title={title} url={url} />
-        <FestivalDetails date={date} place={place} />
-        <FeaturedBands bands={bands} />
-        <div className="festival-buttons">
-         {(() => {
-           const id = festival._id || festival.id || '';
-           return (
-             <Link to={`/updateFestival/${id}`}>  <ModifyButton /> </Link>
-           )
-         })()}
-          <DeleteButton />
+    <>
+      <div className="festival-container">
+        <FestivalImage festival={festival} />
+        <div className="festival-information-container">
+          <FestivalInfo title={festival.festivalName}/>
+          <FestivalDetails date={festival.festivalDate} place={festival.festivalLocation} />
+          <FeaturedBands bands={festival.featureBands} />
+          <DescriptionFestival description={festival.description} />
+          <div className="festival-buttons">
+          {isLoggedIn ? (
+            <Link to={`/updateFestival/${festival._id}`}> <ModifyButton /> </Link>
+          ): null}   
+          {isLoggedIn ? (
+            <DeleteButton />
+            ) : null
+          }
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default FestivalCardId;

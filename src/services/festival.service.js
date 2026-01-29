@@ -1,7 +1,11 @@
 import api from "./api";
 
- const getAllFestival = () => {
+const getAllFestival = () => {
   return api.get("/festival/");
 };
 
-export default { getAllFestival };
+const getFestivalById = (id) => {
+  return api.get(`/festival/${id}`);
+};
+
+export default { getAllFestival, getFestivalById };

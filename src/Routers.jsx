@@ -8,16 +8,89 @@ import UpdateFestival from "./layouts/UpdateFestival.layout.jsx";
 import SignupPage from "./pages/CreateAccount.page.jsx"
 import login from "./pages/Connexion.page.jsx"
 // function Routers({festival, setFestival}: {festival: any, setFestival: any}) {
-function Routers({ festival, setFestival }) {
+function Routers({
+  festivals,
+  setFestivals,
+  loading,
+  setLoading,
+  error,
+  setError,
+  isLoggedIn,
+}) {
   return (
     <Routes>
-      <Route path="/" element={<HomePage festival={festival} setFestival={setFestival} />} />
-      <Route path="/festival" element={<FestivalPage festival={festival} setFestival={setFestival} />} />
-      <Route path="/festival/:festivalId" element={<FestivalIdPage festival={festival} setFestival={setFestival} />} />
-      <Route path="/addFestival" element={<AddFestival festival={festival} setFestival={setFestival} />} />
-      <Route path="/updateFestival/:festivalId" element={<UpdateFestival festival={festival} setFestival={setFestival} />} />
-      <Route path="/signup" element={ <SignupPage /> } />  
-      <Route path="/login" element={ <login /> } />
+      <Route
+        path="/"
+        element={
+          <HomePage
+            festivals={festivals}
+            setFestivals={setFestivals}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
+      <Route
+        path="/festival"
+        element={
+          <FestivalPage
+            festivals={festivals}
+            setFestivals={setFestivals}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
+      <Route
+        path="/festival/:id"
+        element={
+          <FestivalIdPage
+            festivals={festivals}
+            setFestivals={setFestivals}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
+      <Route
+        path="/addFestival"
+        element={
+          <AddFestival
+            festivals={festivals}
+            setFestivals={setFestivals}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
+      <Route
+        path="/updateFestival/:id"
+        element={
+          <UpdateFestival
+            festivals={festivals}
+            setFestivals={setFestivals}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/login" element={<login />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
