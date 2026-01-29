@@ -19,4 +19,15 @@ const updateFestival = (id, formData) => {
   return api.put(`/festival/${id}`, formData);
 };
 
-export default { getAllFestival, getFestivalById, createFestival, updateFestival };
+const deleteFestival = (id) => {
+  return api.delete(`/festival/${id}`);
+};
+export { deleteFestival };
+
+export default {
+  getAllFestival,
+  getFestivalById,
+  createFestival,
+  updateFestival,
+  deleteFestival,
+};

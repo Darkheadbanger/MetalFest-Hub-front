@@ -9,7 +9,7 @@ import { AuthContext } from "../context/auth.context";
 import { useContext } from "react";
 
 import "../styles/CardFestival.css"
-export default function FestivalCard({ festival }) {
+export default function FestivalCard({ festival, setFestivals }) {
   const { isLoggedIn } = useContext(AuthContext);
   return (
     <>
@@ -25,7 +25,7 @@ export default function FestivalCard({ festival }) {
             <Link to={`/updateFestival/${festival._id}`}> <ModifyButton /> </Link>
           ): null}   
           {isLoggedIn ? (
-            <DeleteButton />
+          <DeleteButton festival={festival} setFestivals={setFestivals} />
             ) : null
           }
           </div>

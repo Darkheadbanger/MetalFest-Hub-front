@@ -1,4 +1,4 @@
-.delete-festival button[type="click"] {
+.delete-festival button[type="button"] {
   padding: 10px 14px;
   background: linear-gradient(90deg,#ff4d4f,#c70039);
   border: none;
@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 
-.delete-festival button[type="click"]:hover { transform: translateY(-2px); }
+.delete-festival button[type="button"]:hover { transform: translateY(-2px); }
 
 /* helper: span this input container across both grid columns and pin it to the right */
 .delete-festival--full {

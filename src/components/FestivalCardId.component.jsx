@@ -8,12 +8,9 @@ import DeleteButton from "./DeleteButton.component.jsx"
 import DescriptionFestival from "./descriptionFestival.component.jsx"
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-import { useContext } from "react";
 
 import "../styles/CardFestival.css"
  function FestivalCardId({ festival }) {
-  const { isLoggedIn } = useContext(AuthContext);
-  console.log()
   return (
     <>
       <div className="festival-container">
@@ -24,13 +21,6 @@ import "../styles/CardFestival.css"
           <FeaturedBands bands={festival.featureBands} />
           <DescriptionFestival description={festival.description} />
           <div className="festival-buttons">
-          {isLoggedIn ? (
-            <Link to={`/updateFestival/${festival._id}`}> <ModifyButton /> </Link>
-          ): null}   
-          {isLoggedIn ? (
-            <DeleteButton />
-            ) : null
-          }
           </div>
         </div>
       </div>

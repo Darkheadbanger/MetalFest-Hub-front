@@ -3,7 +3,7 @@ import FestivalCard from "./FestivalCard.component";
 import CreateFestivalButton from "./CreateFestivalButton.component";
 import { Link } from "react-router-dom";
 
-function Main({ festivals = [], loading, error, isLoggedIn }) {
+function Main({ festivals = [], loading, error, isLoggedIn, setFestivals }) {
 
 
   return (
@@ -15,7 +15,9 @@ function Main({ festivals = [], loading, error, isLoggedIn }) {
       ) : error ? (
         <p>Erreur: {error.message || "Impossible de charger"}</p>
       ) : (
-          festivals.map((fest) => <FestivalCard key={fest._id || fest.id} festival={fest} />)
+          festivals.map((fest) => (
+            <FestivalCard key={fest._id} festival={fest} setFestivals={setFestivals} />
+          ))
       )}
     </main>
   );
