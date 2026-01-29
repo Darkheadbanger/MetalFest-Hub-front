@@ -74,6 +74,11 @@ function AddFestival({ setFestivals }) {
     }
   };
 
+  const toDateTimeLocal = (iso) => {
+    if (!iso) return '';
+    // keep YYYY-MM-DDTHH:MM
+    return iso.substring(0, 16);
+  };
 
   return (
     <div className="festival-connexion">
@@ -123,6 +128,7 @@ function AddFestival({ setFestivals }) {
                 required
                 value={formData.festivalDate}
                 onChange={handleChange}
+                defaultValue={toDateTimeLocal(formData.festivalDate)}
               />
             </div>
 

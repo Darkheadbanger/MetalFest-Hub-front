@@ -37,13 +37,14 @@
 .modify-input-festival label {
   font-size: 0.9rem;
   margin-bottom: 6px;
-  color: #f0e7dd;
+  color: #201412;
 }
 
 .modify-input-festival input[type="text"],
 .modify-input-festival input[type="url"],
 .modify-input-festival input[type="number"],
 .modify-input-festival input[type="date"],
+.modify-input-festival input[type="datetime-local"],
 .modify-input-festival textarea {
   background-color: #201412;
   border: 1px solid rgba(175,203,137,0.12);
