@@ -128,7 +128,6 @@ function AddFestival({ setFestivals }) {
                 required
                 value={formData.festivalDate}
                 onChange={handleChange}
-                defaultValue={toDateTimeLocal(formData.festivalDate)}
               />
             </div>
 

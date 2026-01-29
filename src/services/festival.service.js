@@ -14,4 +14,9 @@ const createFestival = (formData) => {
   return api.post(`/festival`, formData);
 };
 
-export default { getAllFestival, getFestivalById, createFestival };
+const updateFestival = (id, formData) => {
+  // formData may be FormData when including files
+  return api.put(`/festival/${id}`, formData);
+};
+
+export default { getAllFestival, getFestivalById, createFestival, updateFestival };
