@@ -13,7 +13,7 @@ export default function FestivalCard({ festival, setFestivals }) {
   const { isLoggedIn } = useContext(AuthContext);
   return (
     <>
-    <Link to={`/festival/${festival._id}`} onClick={() => console.log("ici", festival._id)}>
+    <Link to={`/festival/${festival._id}`} onClick={() => console.log("ici", festival)}>
       <div className="festival-container">
         <FestivalImage festival={festival} />
         <div className="festival-information-container">

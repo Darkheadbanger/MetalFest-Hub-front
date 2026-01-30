@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 function FestivalIdPage({ festivals }) {
   const { id } = useParams();
 
-  const festivalFound = (festivals).find((fest) => {
+  const festivalFound = festivals.find((fest) => {
     return fest._id === id;
   });
   if (!festivalFound) {
