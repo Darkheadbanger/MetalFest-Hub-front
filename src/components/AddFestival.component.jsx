@@ -37,6 +37,11 @@ function AddFestival({ setFestivals }) {
 
     const submitFestival = async (e) => {
     e.preventDefault();
+      // enforce image presence client-side if backend requires it
+      if (!formData.imageFile) {
+        alert("Please upload an image before creating a festival.");
+        return;
+      }
     const body = new FormData();
 
     const bands = (formData.featureBandsText || "")
@@ -57,6 +62,19 @@ function AddFestival({ setFestivals }) {
     body.append("festival", JSON.stringify(festivalPayload));
     if (formData.imageFile) {
       body.append("image", formData.imageFile)
+    }
+    // Debug: log FormData contents and auth token to help diagnose server errors in prod
+    try {
+      const entries = [];
+      for (const pair of body.entries()) {
+        // avoid dumping binary file contents; show file name instead
+        if (pair[1] instanceof File) entries.push([pair[0], pair[1].name]);
+        else entries.push(pair);
+      }
+      console.debug("Creating festival - FormData entries:", entries);
+      console.debug("authToken:", localStorage.getItem("authToken"));
+    } catch (logErr) {
+      console.debug("FormData debug failed", logErr);
     }
     try {
       const res = await festivalService.createFestival(body);
@@ -159,6 +177,7 @@ function AddFestival({ setFestivals }) {
                 type="file"
                 accept="image/*"
                 onChange={handleChange}
+                required
               />
             </div>
 
